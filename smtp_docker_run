@@ -1,0 +1,11 @@
+docker run --rm -p 3000:3000 \
+  -e SMTP_HOST=smtp.gmail.com \
+  -e SMTP_PORT=587 \
+  -e SMTP_USER=user \
+  -e SMTP_PASS=pass \
+  -e SMTP_FROM="noreply@example.com" \
+  -e SMTP_TO="tester.client1002@gmail.com" \
+  -e CORS_ORIGIN=http://localhost:5173 \
+  callback-service
+
+docker run --rm -p 3000:3000 -e SMTP_HOST=smtp.gmail.com -e SMTP_PORT=587 -e SMTP_USER=user -e SMTP_PASS=pass -e SMTP_FROM="noreply@example.com" -e SMTP_TO="tester.client1002@gmail.com" -e CORS_ORIGIN=http://localhost:5173 callback-service

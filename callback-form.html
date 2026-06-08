@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Request a Callback</title>
+</head>
+<body>
+  <main class="hero" id="callbackPanel">
+    <header class="hero-header">
+      <button id="closeFormButton" class="close-button" type="button" aria-label="Close form">×</button>
+      <div class="eyebrow">Callback Service</div>
+      <h1 class="hero-title">Need a call back? Let us connect you quickly.</h1>
+      <p class="hero-copy">Send your details and we’ll reach out within the next business hour. The more context you provide, the better prepared we are.</p>
+    </header>
+
+    <form id="callbackForm">
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" required placeholder="Your full name">
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" name="phone" required placeholder="+1 555 123 4567">
+        <div class="hint">Include your country code for the fastest response.</div>
+      </div>
+
+      <div class="field">
+        <label for="message">Message (optional)</label>
+        <textarea id="message" name="message" placeholder="Tell us how we can help."></textarea>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Request a Call</button>
+      </div>
+    </form>
+
+    <div id="result" aria-live="polite"></div>
+  </main>
+
+  <button id="toggleFormButton" aria-expanded="false" aria-controls="callbackPanel">
+    <img src="./cell.png" alt="call_btn">
+  </button>
+<script src="script.js"></script>
+</body>
+</html>
