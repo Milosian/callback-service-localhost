@@ -29,7 +29,7 @@ function callback_widget_enqueue_assets() {
     );
 
     wp_localize_script('callback-widget-script', 'callbackWidgetData', array(
-        'apiUrl' => 'https://garbage-waltz-aspirin.ngrok-free.dev/api/callback'
+        'apiUrl' => 'https://kilobyte-sandstone-clothes.ngrok-free.dev/api/callback'
     ));
 }
 add_action('wp_enqueue_scripts', 'callback_widget_enqueue_assets');

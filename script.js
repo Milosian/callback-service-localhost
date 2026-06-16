@@ -4,7 +4,7 @@ const panel = document.querySelector('.callback-widget #callbackPanel');
 const toggleButton = document.querySelector('.callback-widget #toggleFormButton');
 const closeButton = document.querySelector('.callback-widget #closeFormButton');
 
-const apiUrl = callbackWidgetData?.apiUrl || "https://garbage-waltz-aspirin.ngrok-free.dev/api/callback";
+const apiUrl = callbackWidgetData?.apiUrl || "https://kilobyte-sandstone-clothes.ngrok-free.dev/api/callback";
     function openPanel() {
       panel.classList.add('open');
       toggleButton.classList.add('hidden');
