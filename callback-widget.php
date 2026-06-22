@@ -3,7 +3,7 @@
 Plugin Name: Callback Widget
 Description: Adds a callback request widget using the callback-service form.
 Version: 1.0
-Author: Your Name
+Author: Milosian
 */
 
 function callback_widget_enqueue_assets() {
