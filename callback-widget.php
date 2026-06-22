@@ -7,23 +7,29 @@ Author: Milosian
 */
 
 function callback_widget_enqueue_assets() {
+    $style_path = plugin_dir_path(__FILE__) . 'style.css';
+    $script_path = plugin_dir_path(__FILE__) . 'script.js';
+    
+    $style_version = file_exists($style_path) ? filemtime($style_path) : '1.0';
+    $script_version = file_exists($script_path) ? filemtime($script_path) : '1.0';
+    
     wp_enqueue_style(
         'callback-widget-style',
         plugin_dir_url(__FILE__) . 'style.css',
         array(),
-        filemtime(plugin_dir_path(__FILE__) . 'style.css')
+        $style_version
     );
 
     wp_enqueue_script(
         'callback-widget-script',
         plugin_dir_url(__FILE__) . 'script.js',
         array(),
-        filemtime(plugin_dir_path(__FILE__) . 'script.js'),
+        $script_version,
         true
     );
 
     wp_localize_script('callback-widget-script', 'callbackWidgetData', array(
-        'apiUrl' => 'https://garbage-waltz-aspirin.ngrok-free.dev/api/callback'
+        'apiUrl' => 'https://kilobyte-sandstone-clothes.ngrok-free.dev/api/callback'
     ));
 }
 add_action('wp_enqueue_scripts', 'callback_widget_enqueue_assets');
